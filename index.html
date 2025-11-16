@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+     
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(168, 110, 110);
+      }
+      .product_card {
+        width: 150px;
+        /* height: 150px; */
+        padding: 20px;
+        color: gray;
+        background-color: rgb(64, 63, 63);
+        border-radius: 12px;
+      }
+      .product_card img {
+        width: 80%;
+        height: 150px;
+        margin-bottom: 10px;
+      }
+      .product_card img:hover {
+        transform: scale(1.2);
+      }
+      .price {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: white;
+      }
+      .btn {
+        padding: 6px;
+        margin-top: 10px;
+        width: 100%;
+        background-color: rgb(168, 110, 110);
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+      }
+      .icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 6px;
+      }
+      .contain {
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        margin: auto;
+        width: 80%;
+        gap: 20px;
+        margin-top: 60px;
+        
+        
+
+        /* justify-content: center;
+        align-items: center;
+        display: flex; */
+      }
+      .under{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: brown;
+        text-align: center;
+        padding: 10px;
+       
+      }
+      @media (max-width: 1500px) {
+        .contain{
+          display: grid;
+          grid-template-columns: repeat(5,1fr);
+        }
+        
+        .footer{
+          display: flex;
+        }
+        .under{
+          display: none;
+        }
+        .icon{
+          display: none;
+        }
+        
+      }
+       @media (max-width: 992px) {
+        .contain{
+          display: grid;
+          grid-template-columns: repeat(3,1fr);
+        }
+
+         @media (max-width: 448px) {
+        .contain{
+          
+          grid-template-columns: repeat(1,1fr);
+        }
+        .footer{
+          display: none;
+
+        }
+        
+        .icon{
+          display: flex;
+        }
+        .under{
+          display: flex;
+        }
+        .list_item{
+          display: none;
+        }
+        
+      }
+        
+       }
+
+      .product_img {
+        position: relative;
+      }
+      .product_img span {
+        position: absolute;
+        top: 10px;
+        right: 4px;
+        background-color: brown;
+        padding: 2px 6px;
+        border-radius: 5px;
+        font-size: 12px;
+        transform: rotate(35deg);
+        margin-top: 10px;
+        
+      }
+      .logo{
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        color: rgb(16, 16, 16);
+        margin-left: 20px;
+      }
+      .logo img{
+        width: 40px;
+        height: 40px;
+       
+      }
+      
+      .navbar{
+        display: flex;
+        justify-content: space-between;
+        background-color: brown;
+        width: 100%;
+        top: 0;
+        right: 0;
+        position: fixed;
+        z-index: 1;
+        align-items: center;
+      }
+      
+      .list{
+        display: block;
+        display: flex;
+        list-style: none;
+        gap: 50px;
+        margin-right: 20px;
+        align-items: center;
+      }
+      .list_item:hover{
+        color: rgb(58, 8, 8);
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .footer{
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(114, 114, 236);
+        margin-top: 20px;
+         /* position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;   */
+         
+      }
+      .contact1{
+        display: block;
+        text-decoration: none;
+      
+      }
+      .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      padding: 8px 0;
+      background: #f9f9f9;
+    }
+      
+    </style>
+  </head>
+  <div class="navbar">
+    <div class="logo">
+    <img src="https://img.icons8.com/?size=100&id=zn5APUduFHF6&format=png&color=000000" alt="">
+    <p>Shopee</p>
+  </div>
+  <ul class="list">
+    <li class="list_item">Home</li>
+    <li class="list_item">Product</li>
+    <li class="list_item">Contact</li>
+    <li class="list_item">About</li>
+  </ul>
+   <div class="icon"><i class="icon" data-lucide="menu"></i></div>
+  </div>
+  
+
+    <div class="contain">
+      <div class="product_card">
+        <div class="product_img">
+          <a href="./product_infor.html"><img
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+            alt=""
+          /></a>
+          <span>30% off</span>
+        </div>
+
+        <p class="price">$109.95</p>
+        <marquee behavior="" direction=""><p>No. 1 Backpack,Fits 15 Laptops</p></marquee>
+        <button class="btn">
+          <i class="icon" data-lucide="shopping-cart"></i>shopping
+        </button>
+      </div>
+      <div class="product_card">
+        <div class="product_img">
+          <a href="./product_detail.html"><img
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+            alt=""
+          /></a>
+          <span>30% off</span>
+        </div>
+
+        <p class="price">$109.95</p>
+        <marquee behavior="" direction=""><p>No. 1 Backpack,Fits 15 Laptops</p></marquee>
+        <button class="btn">
+          <i class="icon" data-lucide="shopping-cart"></i>shopping
+        </button>
+      </div>
+      <div class="product_card">
+        <div class="product_img">
+          <a href="./product_detail.html"><img
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+            alt=""
+          /></a>
+          <span>30% off</span>
+        </div>
+
+        <p class="price">$109.95</p>
+        <marquee behavior="" direction=""><p>No. 1 Backpack,Fits 15 Laptops</p></marquee>
+        <button class="btn">
+          <i class="icon" data-lucide="shopping-cart"></i>shopping
+        </button>
+      </div>
+
+
+
+      <div class="product_card">
+        <div class="product_img">
+          <img
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+            alt=""
+          />
+          <span>30% off</span>
+        </div>
+        <p class="price">$109.95</p>
+        <marquee behavior="" direction=""><p>No. 1 Backpack,Fits 15 Laptops</p></marquee>
+        <button class="btn">
+          <i class="icon" data-lucide="shopping-cart"></i>shopping
+        </button>
+      </div>
+      <div class="product_card">
+        <div class="product_img">
+          <img
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+            alt=""
+          />
+          <span>30% off</span>
+        </div>
+        <p class="price">$109.95</p>
+        <marquee behavior="" direction=""><p>No. 1 Backpack,Fits 15 Laptops</p></marquee>
+        <button class="btn">
+          <i class="icon" data-lucide="shopping-cart"></i>shopping
+        </button>
+      </div>
+      <div class="product_card">
+        <div class="product_img">
+          <img
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+            alt=""
+          />
+          <span>30% off</span>
+        </div>
+        <p class="price">$109.95</p>
+        <marquee behavior="150px" direction="">No. 1 Backpack,Fits 15 Laptops</marquee>
+        <button class="btn">
+          <i class="icon" data-lucide="shopping-cart"></i>shopping
+        </button>
+      </div>
+      <div class="product_card">
+        <div class="product_img">
+          <img
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+            alt=""
+          />
+          <span>30% off</span>
+        </div>
+        <p class="price">$109.95</p>
+        <marquee behavior="" direction="">No. 1 Backpack,Fits 15 Laptops</marquee>
+        <button class="btn">
+          <i class="icon" data-lucide="shopping-cart"></i>shopping
+        </button>
+      </div>
+      <div class="product_card">
+        <div class="product_img">
+          <img
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+            alt=""
+          />
+          <span>30% off</span>
+        </div>
+        <p class="price">$109.95</p>
+        <marquee behavior="" direction=""><p>No. 1 Backpack,Fits 15 Laptops</p></marquee>
+        <button class="btn">
+          <i class="icon" data-lucide="shopping-cart"></i>shopping
+        </button>
+      </div>
+      <div class="product_card">
+        <div class="product_img">
+          <img
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+            alt=""
+          />
+          <span>30% off</span>
+        </div>
+        <p class="price">$109.95</p>
+        <marquee behavior="" direction=""><p>No. 1 Backpack,Fits 15 Laptops</p></marquee>
+        <button class="btn">
+          <i class="icon" data-lucide="shopping-cart"></i>shopping
+        </button>
+      </div>
+      <div class="product_card">
+        <div class="product_img">
+          <img
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+            alt=""
+          />
+          <span>30% off</span>
+        </div>
+        <p class="price">$109.95</p>
+        <marquee behavior="" direction=""><p>No. 1 Backpack,Fits 15 Laptops</p></marquee>
+        <button class="btn">
+          <i class="icon" data-lucide="shopping-cart"></i>shopping
+        </button>
+      </div>
+    </div>
+    <div class="footer">
+       <div class="logo">
+        <img src="https://img.icons8.com/?size=100&id=zn5APUduFHF6&format=png&color=000000" alt="">
+        <p>Shopee</p>
+       </div>
+        <div class="contact">
+          <h4 class="contact1">PRODUCTS</h4>
+          <a class="contact1" href="">Shirt</a>
+          <a class="contact1" href="">Shoes</a>
+          <a class="contact1" href="">Dress</a>
+          </div>
+          
+        
+        <div class="contact">
+          <h4 class="contact1">LEGAL</h4>
+          <a  class="contact1" href="">Privacy</a>
+          <a class="contact1" href="">Term & Condition</a>
+          <a class="contact1" href="">Shipping</a>
+        </div>
+        <div>
+          <h4 class="contact1">CONTACT</h4>
+          <div style="display: flex;align-items: center; ">
+            <i class="icon" data-lucide="map-pin"></i><p class="contact1">Phnom Penh</p>
+          </div>
+          <div style="display: flex; align-items: center;list-style: none;">
+            <i class="icon" data-lucide="mail"></i><a class="contact1" href="">voteymorl2@gmail.com</a>
+
+          </div>
+          <div style="display: flex;align-items: center;">
+            <i class="icon" data-lucide="phone"></i><a class="contact1" href="">+885 123 456 789</a>
+          </div>
+        </div>
+       </div>
+    </div>
+    <div class="under">
+       <ul style="justify-content: center; display: flex;gap: 50px;">
+    <div><i class="icon" data-lucide="house"></i><li style="list-style: none;">Home</li></div>
+    <div ><i class="icon" data-lucide="shopping-cart"></i><li style="list-style: none;">Product</li></div>
+    <div> <i class="icon" data-lucide="contact"></i><li style="list-style: none;">Contact</li></div>
+    <div ><i class="icon" data-lucide="search-x"></i><li style="list-style: none;">About</li></div>
+    </ul>
+   
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
